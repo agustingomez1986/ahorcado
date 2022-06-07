@@ -41,7 +41,7 @@ h1{
 main{
     width: 100vw;
     height: 70vh;
-    background: url(fondo.jpg);
+    background: url(https://raw.githubusercontent.com/agustingomez1986/ahorcado/master/img/fondo.jpg);
     background-position-y: center;
 }
 
