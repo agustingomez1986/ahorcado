@@ -1,0 +1,369 @@
+*{
+    box-sizing: border-box;
+}
+
+.invisible{
+    display: none;
+}
+
+body{
+    font-family: 'MedievalSharp', cursive;
+}
+
+header{
+    background-color: darkslategray;
+    width: 100vw;
+    height: 10vh;
+    color: white;
+    letter-spacing: 2px;    
+}
+
+.bloque-header{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+header .bloque-header:before{
+	content: '';
+	display:inline-block;
+	height: 100%;
+	vertical-align:	middle;
+}
+
+h1{
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle; 
+}
+
+main{
+    width: 100vw;
+    height: 70vh;
+    background: url(fondo.jpg);
+    background-position-y: center;
+}
+
+#boton-empecemos{
+    height: 15vh;
+    width: 15vw;
+    min-width: 150px;
+    background-color: dodgerblue;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    margin: 27.5vh 42.5vw;
+    text-align: center;
+}
+
+#tablero-juego{
+    width: 80vw;
+    max-width: 1200px;
+    height: 100%;
+    max-height: 800px;
+    margin: 0 auto;
+}
+
+#horca{
+    margin-top: 10vh;
+    margin-left: 15vw;
+    display: inline-block;
+}
+
+#botones-tablero{
+    position: relative;
+    width: 30vw;
+    height: 40vh;
+    left: 50vw;
+    bottom: 45vh;
+}
+
+#comenzar{
+    height: 15vh;
+    width: 15vw;
+    min-width: 150px;
+    background-color: green;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+#agregar-palabra{
+    height: 15vh;
+    width: 15vw;
+    min-width: 150px;
+    background-color: red;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#esqueleto-head{
+    position: absolute;
+    top: calc(20vh + 75px);
+    left: calc(10vw + 15vw + 120px);
+    mix-blend-mode: multiply;
+}
+
+#esqueleto-body{
+    position: absolute;
+    top: calc(20vh + 75px + 61px);
+    left: calc(10vw + 15vw + 120px - 11px);
+    mix-blend-mode: multiply;
+}
+
+#esqueleto-left-leg{
+    mix-blend-mode: multiply;
+    position: absolute;
+    top: calc(20vh + 75px + 145px);
+    left: calc(10vw + 15vw + 120px + 8px);
+}
+
+#esqueleto-right-leg{
+    mix-blend-mode: multiply;
+    position: absolute;
+    top: calc(20vh + 75px + 144px);
+    left: calc(10vw + 15vw + 120px + 20px);
+}
+
+#esqueleto-left-arm{
+    mix-blend-mode: multiply;
+    position: absolute;
+    top: calc(20vh + 75px + 35px);
+    left: calc(10vw + 15vw + 120px - 70px);
+}
+
+#esqueleto-right-arm{
+    mix-blend-mode: multiply;
+    position: absolute;
+    top: calc(20vh + 75px + 33px);
+    left: calc(10vw + 15vw + 120px + 57px);
+}
+
+#bloque-incorrecto{
+    position: absolute;
+    bottom: 45vh;
+    left: 45vw;
+    font-size: 40px;
+    width: 40vw;
+    height: 20vh;
+    display: inline;
+}
+
+#letras-incorrectas{
+    letter-spacing: 10px;
+    color: red;
+}
+
+#bloque-palabra-secreta{
+    display: inline-block;
+    position: absolute;
+    bottom: 20vh;
+    right: 25vw;
+    text-align: right;
+    font-weight: bold;
+    display: block;
+}
+
+#palabra-secreta{
+    letter-spacing: 10px;
+    font-size: 40px;
+    color: darkgreen;
+}
+
+#botones-juego-comenzado{
+    width: 500px;
+    height: 15vh;
+    position: absolute;
+    top: 15vh;
+    right: 20vw;
+}
+
+#reiniciar-jc{
+    height: 15vh;
+    width: 15vw;
+    min-width: 150px;
+    background-color: green;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+#menu-principal-jc{
+    height: 15vh;
+    width: 15vw;
+    min-width: 150px;
+    background-color: orangered;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    text-align: center;  
+}
+
+#bloque-agregar-palabra{
+    height: 65vh;
+    width: 27vw;
+    position: absolute;
+    right: 20vw;
+    top: 15vh;
+}
+
+#pergamino{
+    position: sticky;
+}
+
+h2{
+    position: absolute;
+    top: 150px;
+    margin-left: 100px;
+    width: 240px;
+}
+
+#ingreso-palabra{
+    font-family: 'MedievalSharp', cursive;
+    font-size: 30px;
+    background-color: transparent;
+    position: absolute;
+    top: 280px;
+    margin-left: 100px;
+    width: 240px;
+}
+
+#confirmar-agregar{
+    font-family: 'MedievalSharp', cursive;
+    font-size: 30px;
+    background-color: transparent;
+    position: absolute;
+    top: 340px;
+    margin-left: 100px;
+}
+
+#volver{
+    font-size: 30px;
+    background-color: transparent;
+    position: absolute;
+    top: 340px;
+    margin-left: 300px;
+}
+
+#fin-juego{
+    width: 40vw;
+    max-width: 600px;
+    height: 30vh;
+    max-height: 800px;
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+
+}
+
+#mensaje-fin-juego{
+    display: block;
+    text-align: center;
+}
+
+.juego-perdido{
+    color: red;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.juego-ganado{
+    color: green;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#botones-fin-juego{
+    width: 30.5vw;
+    margin: 10px auto;
+}
+
+#reiniciar-fj{
+    height: 15vh;
+    width: 15vw;
+    min-width: 150px;
+    background-color: green;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+#menu-principal-fj{
+    height: 15vh;
+    width: 15vw;
+    min-width: 150px;
+    background-color: orangered;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+footer{
+    background-color: #222;
+    width: 100vw;
+    height: 20vh;
+    letter-spacing: 1px;
+}
+
+.rodapie{
+    height: 100%;
+    width: 400px;
+    min-width: 310px;
+    margin: 0 auto;
+    color: whitesmoke;
+}
+
+footer .rodapie:before{
+	content: '';
+	display:inline-block;
+	height: 100%;
+	vertical-align:	middle;
+}
+
+h3{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#img-linkedin{
+    margin-left: 5px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+#img-alura{
+    margin-left: 5px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+#img-github{
+    margin-left: 5px;
+    height: 30px;
+    vertical-align: middle;
+}

@@ -1,0 +1,108 @@
+ <!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Juego de Ahorcado</title>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <div class="bloque-header">
+                <h1>JUGUEMOS AL AHORCADO</h1>
+            </div>
+        </header>
+        
+        <main>
+
+            <button id="boton-empecemos">Empecemos!!</button>
+            
+            <section id="tablero-juego" class="invisible">
+                <img src="img/horca.png" id="horca">
+                
+                <div id="botones-tablero">
+                    <button id="comenzar">Comenzar</button>
+                    <button id="agregar-palabra">Agregar palabra</button>
+                </div>
+
+                <div id="juego-comenzado" class="invisible">
+                    <span id="error-ajax" class="invisible">Error al importar palabras</span>
+
+                    <div id="bloque-incorrecto">
+                        <span id="texto-letras-incorrectas">Letras Incorrectas: </span>
+                        <span id="letras-incorrectas"></span>
+                    </div>
+                                        
+                    <div id="esqueleto">
+                        <img src="img/head.png" id="esqueleto-head" class="invisible">
+                        <img src="img/body.png" id="esqueleto-body" class="invisible">
+                        <img src="img/left-arm.png" id="esqueleto-left-arm" class="invisible">
+                        <img src="img/left-leg.png" id="esqueleto-left-leg" class="invisible">
+                        <img src="img/right-arm.png" id="esqueleto-right-arm" class="invisible">
+                        <img src="img/right-leg.png" id="esqueleto-right-leg" class="invisible">
+                    </div>
+
+                    <div id="bloque-palabra-secreta">
+                        <span id="palabra-secreta"></span>
+                    </div>
+
+                    <div id="botones-juego-comenzado">
+                        <button id="reiniciar-jc">Reiniciar</button>
+                        <button id="menu-principal-jc">Menú principal</button>
+                    </div>
+                </div>
+
+                <div id="bloque-agregar-palabra" class="invisible">
+                    <img src="img/pergamino.png" id="pergamino" alt="Pergamino">
+
+                    <h2><p>Solo se admiten palabras en mayúscula, sin acentos ni caracteres especiales y sin espacios.</p>
+                    <p>Advertencia: al recargar la página se borrarán las palabras agregadas</p> 
+                    </h2>
+
+                    <input id="ingreso-palabra" placeholder="Ingrese palabra">
+                    <button id="confirmar-agregar">Agregar</button>
+                    <button id="volver">↶</button>
+                </div>
+            </section>
+
+            <section id="fin-juego" class="invisible">
+                <span id="mensaje-fin-juego"></span>
+
+                <div id="botones-fin-juego">
+                    <button id="reiniciar-fj">Jugar de nuevo</button>
+                    <button id="menu-principal-fj">Menú principal</button>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="rodapie">
+				<h3>Creado por Agustín Gomez</h3>
+                <a href="https://www.linkedin.com/in/agustingomez1986"><img src="img/linkedin.png" alt="Icono Linkedin" id="img-linkedin"></a>
+                <a href="https://app.aluracursos.com/user/agustingomez1986"><img src="img/letraalura.png" alt="Símbolo Alura" id="img-alura"></a>
+                <a href="https://github.com/agustingomez1986/"><img src="img/github.png" alt="Icono Github" id="img-github"></a>
+			</div>
+        </footer>
+
+        <script src="js/boton-empecemos.js"></script>
+        <script src="js/botones-tablero.js"></script>
+        <script src="js/dibujar-guiones.js"></script>
+        <script src="js/validar-ingreso.js"></script>
+        <script src="js/verificar-coincidencia.js"></script>
+        <script src="js/dibujar-ahorcado.js"></script>
+        <script src="js/verificar-repeticion-letra.js"></script>
+        <script src="js/verificar-fin-juego.js"></script>
+        <script src="js/botones-fin-juego.js"></script>
+        <script src="js/reinicio-variables.js"></script>
+        <script src="js/agregar-palabra.js"></script>
+        <script src="js/botones-juego-comenzado.js"></script>
+
+    </body>
+</html>
